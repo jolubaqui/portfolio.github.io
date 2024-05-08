@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
-
-/*@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@;0,200;0,300;0,400;0,500;0,600;0,700;&display=swap');*/
-
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root
 {
     --bg-black-900:#f2f2fc;
@@ -10,14 +7,20 @@
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
+body.dark
+{
+    --bg-black-900:#181818;
+    --bg-black-100:#242424;
+    --bg-black-50:#303030;
+    --text-black-900:#fff;
+    --text-black-700:#999; 
+}
 body
 {
-
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
 }
-
 *
 {
     margin: 0;
@@ -30,22 +33,17 @@ body
 {
     box-sizing: border-box;
 }
-
-ul{
-
+ul
+{
     list-style: none;
 }
-
 .section
 {
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    
     padding: 0 30px;
-    
     opacity: 1;
-
 }
 .hidden
 {
@@ -71,7 +69,6 @@ ul{
 {
     padding-top: 60px;
     padding-bottom: 70px;
-
 }
 .section-title
 {
@@ -127,7 +124,6 @@ ul{
     border: none;
     background: var(--skin-color);
     transition: all 0.3s ease;
-
 }
 .btn:hover
 {
@@ -244,7 +240,6 @@ ul{
 {
     margin-top: 50px;
 }
-
 .aside .nav li
 {
     margin-bottom: 20px;
@@ -613,4 +608,180 @@ h3.my-profession
     font-size: 16px;
     color: var(--text-black-700);
     line-height: 25px;
+}
+/* portfolio */
+.portfolio .container
+{
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portfolio .portfolio-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+.portfolio .portfolio-item
+{
+    flex: 0 0 33%;
+    max-width: 33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio .portfolio-item-inner .portfolio-img img
+{
+    width: 100%;
+    display: block;
+}
+/* CONTACT SECTION*/
+.contact-title
+{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    
+}
+.contact-sub-title
+{
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+.contact .contact-info-item
+{
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.contact .contact-info-item .icon
+{
+    display: inline-block;
+}
+.contact .contact-info-item .icon .fa
+{
+    font-size: 25px;
+    color: var(--skin-color);
+}
+.contact .contact-info-item h4
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+.contact .contact-info-item p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    margin: 0;
+    line-height: 25px;
+    font-weight: 400;
+}
+.contact .contact-form
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .col-6
+{
+    flex: 50%;
+    max-width: 50%;
+}
+.contact .contact-form .col-12
+{
+    flex: 100%;
+    max-width: 100%;
+}
+.contact .contact-form .form-item
+{
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-900);
+    transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus
+{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contact .contact-form .form-item textarea.form-control
+{
+    height: 140px;
+}
+.contact .contact-form .btn
+{
+    height: 50px;
+    padding: 0 50px;
+}
+@media (max-width:1199px)
+{
+    .aside
+    {
+        left: -270px;
+    }
+    .main-content
+    {
+        padding-left: 0;
+    }
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

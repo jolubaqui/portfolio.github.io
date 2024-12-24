@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route('/your-server-endpoint', methods=['POST'])
 def receive_data():
-    data = request.get_json()
+    data = request.form
+    print(data)
     # Procesa los datos aquí
     return jsonify({"message": "Datos recibidos correctamente", "data": data})
 

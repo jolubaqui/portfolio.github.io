@@ -336,38 +336,39 @@
                     <div class="row">
                         
                     <div class="contact-form padd-15">
-                        <div class="row">
-                            <div class="form-item col-6 padd-15">
-                                <div class="form-group ">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                        <form action="your-server-endpoint" method="POST">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Nombre" required>
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-item col-6 padd-15">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Correo electrónico">
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" placeholder="Asunto" required>
+                                    </div>
                                 </div>
                             </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Asunto">
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="textarea" placeholder="Mensaje" required></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                                <div class="form-group">
-                                    <textarea name="texarea" class="form-control" id="texarea" placeholder="Mensaje"></textarea>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <button type="submit" class="btn">Enviar Mensaje</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                                <button type="submit" class="btn">Enviar Mensaje</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
 
                     </div>
